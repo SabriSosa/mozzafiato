@@ -1,0 +1,62 @@
+<section id="products">
+  <div class="new-arrival-product">
+    <div class="container">
+      <div class="title-box-default">
+        <!-- <a href="#" class="prev-new-arrival"><i class="fa fa-arrow-circle-left"></i></a> -->
+        <span class="title-tab">Nuestros productos</span>
+        <!-- <a href="#" class="next-new-arrival"><i class="fa fa-arrow-circle-right"></i></a> -->
+      </div>
+      <!-- End Title Slider -->
+      <div class="content-product-slider">
+        <div class="wrap-item">
+          <div class="item">
+            <div class="row">
+              <div *ngFor="let image of images" class="col-md-3 col-sm-6 col-xs-12">
+                <div class="item-product">
+                  <div class="item-thumb-product">
+                    <img src={{image.path1}} alt="" class="product-thumb-front" />
+                    <img src={{image.path2}} alt="" class="product-thumb-behind" />
+                    <div class="info-product-cart">
+
+                      <div class="inner-info-product-cart">
+                        <ul>
+                          <li><a href="#" class="link-quick-view"><i class="fas fa-lg fa-info-circle"></i></a></li>
+                        </ul>
+                        <a href="#" class="link-product-add-cart">Add to cart</a>
+                      </div>
+                    </div>
+
+                    <span *ngIf=image.new class="status-product-new">New</span>
+                    <span *ngIf=image.promotion class="status-product-sale">{{image.promotion_discount}}</span>
+                  </div>
+
+                  <div class="item-info-product">
+                    <h3><a href="#">{{image.name}}</a></h3>
+                    <div class="info-product-price">
+                      <span>{{image.price}}</span>
+                      <del>{{image.old_price}}</del>
+                    </div>
+                    <div class="product-rating-star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+          <!-- End Item -->
+
+        </div>
+      </div>
+      <!-- End Content Slider Product -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<div class="container banner">
+  <carousel [height]="height" [borderRadius]="10" [autoplay]="true" [dots]="dots" [loop]="true"
+    [arrowsOutside]="arrowsOutside" [cellsToShow]="cellsToShow">
+
+    <div *ngFor="let image of images" class="carousel-cell">
+      <div *ngIf="image.link" class="banner-info">
+        <h2>{{image.title}}</h2>
+        <p>{{image.info}}
+        </p>
+        <a href={{image.link}}>COMPRAR</a>
+
+      </div>
+      <img src={{image.path}}>
+    </div>
+  </carousel>
+</div>

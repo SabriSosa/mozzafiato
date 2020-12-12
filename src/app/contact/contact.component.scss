@@ -1,0 +1,128 @@
+/*List Design*/
+.list-designer {
+    background: rgba(0, 0, 0, 0) url("../../assets/images/home_1/background.jpg") no-repeat scroll center top;
+    padding: 70px 0;
+    margin-top: 20px;
+}
+.designer-thumb:hover img {
+    transform: scale(1.2);
+}
+.designer-thumb img {
+    transition: all 0.5s ease-out 0s;
+}
+.content-list-designer {
+    text-align: center;
+}
+.content-list-designer > label {
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: normal;
+    margin-right: 45px;
+    margin-top: 55px;
+    vertical-align: top;
+}
+.content-list-designer ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+.see-all-designer:hover {
+    background: #ffc229;
+    color: #fff;
+}
+.see-all-designer {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 45px;
+    margin-top: 55px;
+    text-transform: uppercase;
+    width: 190px;
+    transition: all 0.5s ease-out 0s;
+}
+.designer-thumb {
+    border: 1px solid #aea7a1;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.item-designer h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.item-designer h3 a {
+    color: #fff;
+}
+.item-designer h3 a:hover {
+    color: #ffc229;
+}
+
+.contact-info-left ul li p svg {
+    color: #d33b33;
+    margin-right: 6px;
+}
+.contact-info-left {
+    padding: 20px;
+    background: #e6eaec;
+    margin-top: 135px;
+}
+.contact-info-left h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.contact-info-left p {
+    margin-bottom: 15px;
+}
+ul,
+li,
+ol {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-info-left ul li {
+    margin-bottom: 12px;
+    text-align: left;
+}
+.contact-info-left ul li p {
+    font-size: 16px;
+    color: #222222;
+    font-weight: 300;
+    padding-right: 16px;
+    padding-left: 25px;
+    line-height: 24px;
+    position: relative;
+}
+
+.footer-newsletter,
+.from-our-blog,
+.list-designer {
+    background-attachment: fixed;
+}
+.contact-form-right {
+    p {
+        color: ghostwhite;
+        text-align: justify;
+    }
+
+    h2 {
+        color: white;
+    }
+}
+
+.btn {
+    background-color: #e6eaec;
+    color: black;
+}
+
+.form-control {
+    background-color: #e6eaec;
+}

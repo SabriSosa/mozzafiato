@@ -1,0 +1,187 @@
+@use "../../assets/styles/color";
+
+body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p {
+  margin: 0;
+}
+.logo h1 a {
+  color: #6c7886;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	E-Store
+Version:	1.1
+Last change:	25/01/2016
+Author:	7UP Theme
+-------------------------------------------------------------------*/
+/*General*/
+
+img,
+input,
+textarea {
+  max-width: 100%;
+  outline: none;
+}
+.wrap {
+  overflow: hidden;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  text-decoration: none;
+  outline: none;
+}
+/*Header*/
+#header {
+  padding-top: 50px;
+}
+.top-nav {
+  margin-top: 18px;
+  padding-top: 15px;
+  position: relative;
+}
+.top-nav::before {
+  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.container::before,
+.row::before {
+  content: " ";
+  display: table;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.fa-shopping-cart {
+  color: white;
+}
+.fa-user {
+  color: white;
+}
+
+
+.number-cart-total {
+    background: #333 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #ffc229;
+    display: block;
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -12px;
+    width: 18px;
+}
+
+.link-cart-top {
+    position: relative;
+}
+
+// .nav-item {
+//   a {
+//     color: white;
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     margin-right: 35px;
+
+//   }
+
+// }
+.link-user-top {
+  margin: 0 15px 0 0;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar-collapse > ul > li > a::before {
+  background: color.$green-italy none repeat scroll 0 0;
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 0;
+  transition: all 0.5s ease-out 0s;
+  left: 0;
+  top: 0;
+}
+.navbar-collapse > ul > li > a::after {
+  background: color.$red-italy none repeat scroll 0 0;
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 0;
+  transition: all 0.5s ease-out 0s;
+  right: 0;
+  bottom: 0;
+}
+
+.navbar-collapse > ul > li:hover > a {
+  color: color.$white;
+  font-weight: bold;
+}
+.navbar-collapse > ul > li:hover > a::before,
+.navbar-collapse > ul > li:hover > a::after {
+  width: 100%;
+}
+
+.navbar-collapse > ul > li > a {
+  color: #fff;
+  display: block;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 15px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out 0s;
+}
+.green-italy {
+  color: color.$green-italy;
+}
+.white-italy {
+  color: color.$white;
+}
+.red-italy {
+  color: color.$red-italy;
+}
