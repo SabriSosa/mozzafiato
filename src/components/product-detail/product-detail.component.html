@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{product.name}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div style="text-align:center">
+    <div class='row'>
+      <div class='column'>
+        <div class='image'>
+          <img src="{{product.path}}">
+        </div>
+      </div>
+      <div class='column right'>
+        <div class='description'>
+          <div [innerHTML]="product.description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

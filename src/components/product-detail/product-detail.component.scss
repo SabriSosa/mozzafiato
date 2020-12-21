@@ -1,0 +1,54 @@
+.modal-body {
+    background: url(assets/images/products/deatailOverlay.png) no-repeat top center,
+        url(assets/images/products/detail.jpg) no-repeat top center;
+    color: white;
+    background-color: black;
+}
+.modal-header {
+    background-color: black;
+    color: white;
+}
+
+::ng-deep .modal-dialog {
+    max-width: 80%;
+    width: 80%;
+}
+
+.close {
+    color: white;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.image {
+    img {
+        max-height: 500px;
+    }
+}
+.description {
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 15px;
+    color: #d3d3d3;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.right {
+    flex-grow: 2;
+}
+button:focus {outline:0;}

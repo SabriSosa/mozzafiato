@@ -1,4 +1,4 @@
-@use "../../assets/styles/color";
+@use "assets/styles/color";
 
 body {
   background: #fff;
@@ -184,4 +184,9 @@ a:visited {
 }
 .red-italy {
   color: color.$red-italy;
+}
+
+
+.logo{
+  border-radius: 10px
 }
