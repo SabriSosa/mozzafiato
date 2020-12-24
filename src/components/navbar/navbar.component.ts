@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  totalItems = 0;
+
+  constructor(public shoppingCartService: ShoppingCartService) {
+
+  }
 
   images = [
     {
@@ -29,6 +34,11 @@ export class NavbarComponent implements OnInit {
 
 
   ];
+
+  ngDoCheck() {
+    this.totalItems = this.shoppingCartService.getTotalProducts();
+  }
+
   ngOnInit() {
   }
 

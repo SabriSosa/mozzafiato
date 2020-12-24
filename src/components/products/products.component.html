@@ -11,31 +11,31 @@
         <div class="wrap-item">
           <div class="item">
             <div class="row">
-              <div *ngFor="let image of productsList" class="col-md-3 col-sm-6 col-xs-12">
+              <div *ngFor="let product of productsList" class="col-md-3 col-sm-6 col-xs-12">
                 <div class="item-product">
-                  <div class="item-thumb-product">
-                    <img src={{image.path}} alt="" class="product-thumb-front" />
-                    <img src={{image.path}} alt="" class="product-thumb-behind" />
-                    <div *ngIf="image.stock" class="info-product-cart">
-                      <div class="inner-info-product-cart">
-                        <a href="#" class="link-product-add-cart">
-                          Añadir <a href="#" class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
+                  <div class="item-thumb-product" (click)="open(product.id)">
+                    <img src={{product.path}} alt="" class="product-thumb-front" />
+                    <img src={{product.path}} alt="" class="product-thumb-behind" />
+                    <div *ngIf="product.stock" class="info-product-cart">
+                      <div (click)="addToCart(product, $event)" class="inner-info-product-cart">
+                        <a class="link-product-add-cart">
+                          Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
                         </a>
                       </div>
                     </div>
 
-                    <span *ngIf=image.new class="status-product-new">Nuevo</span>
-                    <span *ngIf=!image.stock class="status-product-soon">Sin stock</span>
-                    <span *ngIf=image.soon class="status-product-new">Proximamente</span>
-                    <span *ngIf=image.promotion class="status-product-sale">{{image.promotion_discount}}</span>
+                    <span *ngIf=product.new class="status-product-new">Nuevo</span>
+                    <span *ngIf=!product.stock class="status-product-soon">Sin stock</span>
+                    <span *ngIf=product.soon class="status-product-new">Proximamente</span>
+                    <span *ngIf=product.promotion class="status-product-sale">{{product.promotion_discount}}</span>
                   </div>
 
                   <div class="item-info-product p-relative">
 
-                    <h3><a (click)="open(image.id)">{{image.name}}</a></h3>
+                    <h3><a (click)="open(product.id)">{{product.name}}</a></h3>
                     <div class="info-product-price">
-                      <span>{{image.price}}</span>
-                      <del *ngIf=image.promotion>{{image.old_price}}</del>
+                      <span>{{product.price}}</span>
+                      <del *ngIf=product.promotion>{{product.old_price}}</del>
 
                     </div>
                     <div class="product-rating-star">
@@ -64,18 +64,3 @@
     </div>
   </div>
 </section>
-
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <app-product-detail></app-product-detail>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-  </div>
-</ng-template>

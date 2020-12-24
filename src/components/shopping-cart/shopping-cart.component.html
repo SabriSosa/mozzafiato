@@ -1,0 +1,36 @@
+<div class="shopping-cart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+
+  <!-- Product #1 -->
+  <div *ngFor="let product of products" class="item">
+    <div class="buttons">
+      <span (click)="removeProduct(product)" class="delete-btn"></span>
+      <span [ngClass]="{'is-active': clicked}" (click)="clicked =!clicked" class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="{{product.path}}" alt="" />
+    </div>
+
+    <div class="description">
+      <span>{{product.name}}</span>
+    </div>
+
+    <div class="quantity">
+      <button (click)="removeQtyProduct(product)" class="minus-btn" type="button" name="button">
+        <img src="assets/images/minus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value={{product.quantity}}>
+      <button (click)="addProduct(product)" class="plus-btn" type="button" name="button">
+        <img src="assets/images/plus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">${{product.price}}</div>
+  </div>
+
+  <div *ngIf="totalPrice>0" class="total-price">${{totalPrice}}</div>
+</div>

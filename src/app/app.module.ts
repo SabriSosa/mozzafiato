@@ -14,6 +14,8 @@ import { ProductsComponent } from '@components/products/products.component';
 import { ContactComponent } from '@components/contact/contact.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { ProductDetailComponent } from '@components/product-detail/product-detail.component';
+import { ShoppingCartComponent } from '@components/shopping-cart/shopping-cart.component';
+import { AlertComponent } from '@components/alert/alert.component';
 
 
 @NgModule({
@@ -25,13 +27,15 @@ import { ProductDetailComponent } from '@components/product-detail/product-detai
     ProductsComponent,
     ContactComponent,
     FooterComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ShoppingCartComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

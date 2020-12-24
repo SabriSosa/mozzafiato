@@ -128,8 +128,6 @@
     margin-bottom: 35px;
 }
 
-
-
 .item-product:hover .info-product-cart {
     opacity: 1;
     visibility: visible;
@@ -153,8 +151,8 @@
 }
 .info-product-cart:hover {
     border: 2.5px solid color.$white;
-    border-bottom: 2.5px solid color.$red-italy;
-    border-top: 2.5px solid color.$green-italy;
+    // border-bottom: 2.5px solid color.$red-italy;
+    // border-top: 2.5px solid color.$green-italy;
     .link-product-add-cart {
         font-weight: bold;
     }
@@ -213,6 +211,7 @@
     margin-top: 25px;
     transition: 0.5s;
     padding: 15px;
+    cursor: text;
 }
 .info-product-price del {
     color: #999;
@@ -261,4 +260,3 @@
     display: flex;
     width: 100%;
 }
-

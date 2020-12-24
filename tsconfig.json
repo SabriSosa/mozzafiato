@@ -17,7 +17,8 @@
 		"paths": {
 			"@app/*": ["app/*"],
 			"@components/*": ["components/*"],
-			"@models/*": ["models/*"]
+			"@models/*": ["models/*"],
+			"@services/*": ["services/*"]
 		}
 	},
 	"angularCompilerOptions": {
