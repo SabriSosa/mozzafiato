@@ -65,7 +65,7 @@ export class ShoppingCartService {
 
     getTotalPrice() {
         this.getProductsList();
-        return this.products.reduce((acc, item) => acc + item.price, 0);
+        return this.products.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     }
 
     getTotalProducts() {

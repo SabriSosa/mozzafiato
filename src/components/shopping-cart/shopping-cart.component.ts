@@ -13,11 +13,12 @@ export class ShoppingCartComponent implements OnInit {
     clicked = false;
     totalPrice = 0;
     ngOnInit() {
-        this.products = this.shoppingCartService.getProducts();
     }
 
     ngDoCheck() {
         this.totalPrice = this.shoppingCartService.getTotalPrice();
+        this.products = this.shoppingCartService.getProducts();
+
     }
 
     removeProduct(product) {
@@ -25,8 +26,9 @@ export class ShoppingCartComponent implements OnInit {
     }
 
     removeQtyProduct(product) {
-        debugger;
         this.shoppingCartService.removeQtyProduct(product);
+        // this.products = this.shoppingCartService.getProducts();
+
     }
 
     addProduct(product) {
