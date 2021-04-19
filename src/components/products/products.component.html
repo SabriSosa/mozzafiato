@@ -16,8 +16,8 @@
                   <div class="item-thumb-product" (click)="open(product.id)">
                     <img src={{product.path}} alt="" class="product-thumb-front" />
                     <img src={{product.path}} alt="" class="product-thumb-behind" />
-                    <div *ngIf="product.stock" class="info-product-cart">
-                      <div (click)="addToCart(product, $event)" class="inner-info-product-cart">
+                    <div (click)="addToCart(product, $event)" *ngIf="product.stock" class="info-product-cart">
+                      <div class="inner-info-product-cart">
                         <a class="link-product-add-cart">
                           Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
                         </a>
@@ -34,8 +34,8 @@
 
                     <h3><a (click)="open(product.id)">{{product.name}}</a></h3>
                     <div class="info-product-price">
-                      <span>{{product.price}}</span>
-                      <del *ngIf=product.promotion>{{product.old_price}}</del>
+                      <span>{{product.price | currency}}</span>
+                      <del *ngIf=product.promotion>{{product.old_price | currency}}</del>
 
                     </div>
                     <div class="product-rating-star">

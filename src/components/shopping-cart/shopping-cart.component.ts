@@ -6,6 +6,7 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
     templateUrl: './shopping-cart.component.html',
     styleUrls: ['./shopping-cart.component.scss']
 })
+
 export class ShoppingCartComponent implements OnInit {
 
     constructor(private shoppingCartService: ShoppingCartService) { }
@@ -27,12 +28,15 @@ export class ShoppingCartComponent implements OnInit {
 
     removeQtyProduct(product) {
         this.shoppingCartService.removeQtyProduct(product);
-        // this.products = this.shoppingCartService.getProducts();
 
     }
 
     addProduct(product) {
         this.shoppingCartService.addToCart(product);
+    }
+
+    addProductQuantity(product, e) {
+        this.shoppingCartService.modifyQty(product, parseInt(e.target.value));
     }
 
 }

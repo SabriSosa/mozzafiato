@@ -20,7 +20,6 @@ export class ProductCart {
   price: number;
   quantity: number;
   constructor(init?: Partial<Product>) {
-    debugger;
     this.id = init.id;
     this.name = init.name;
     this.path = init.path;

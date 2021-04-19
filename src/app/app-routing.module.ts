@@ -6,13 +6,9 @@ import { HomeComponent } from '../components/home/home.component';
 
 
 const routes: Routes = [
+
   {
     path: '',
-    redirectTo: '/index.html',
-    pathMatch: 'full',
-  },
-  {
-    path: 'index.html',
     component: HomeComponent,
   },
   { path: 'shop', component: ShoppingCartComponent }, { path: '**', redirectTo: '/' }, // si pone cualquier URL

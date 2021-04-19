@@ -27,6 +27,18 @@ export class ShoppingCartService {
         this.saveProduct();
     }
 
+    modifyQty(product, qty) {
+        this.getProductsList();
+        const prodCart = new ProductCart(product);
+        this.products.map((i, index) => {
+            if (i.id === product.id) {
+                this.products[index].quantity = qty;
+            }
+        });
+
+        this.saveProduct();
+    }
+
     removeProduct(product: ProductCart) {
         this.getProductsList();
         this.products = this.products.filter(i => i.id !== product.id);
@@ -70,7 +82,8 @@ export class ShoppingCartService {
 
     getTotalProducts() {
         this.getProductsList();
-        return this.products.length;
+        return this.products.reduce((acc, item) => acc + item.quantity, 0);
+
     }
 
     saveProduct() {
