@@ -24,6 +24,7 @@
                       </div>
                     </div>
 
+
                     <span *ngIf=product.new class="status-product-new">Nuevo</span>
                     <span *ngIf=!product.stock class="status-product-soon">Sin stock</span>
                     <span *ngIf=product.soon class="status-product-new">Proximamente</span>
@@ -31,19 +32,24 @@
                   </div>
 
                   <div class="item-info-product p-relative">
-
-                    <h3><a (click)="open(product.id)">{{product.name}}</a></h3>
-                    <div class="info-product-price">
-                      <span>{{product.price | currency}}</span>
-                      <del *ngIf='product.promotion>0'>{{product.old_price | currency}}</del>
-
-                    </div>
                     <div class="product-rating-star">
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
                       <i class="far fa-star"></i>
                       <i class="far fa-star"></i>
+                    </div>
+                    <span class="product-name"><a (click)="open(product.id)">{{product.name}}</a></span>
+                    <div class="info-product-price">
+                      <span>{{product.price | currency}}</span>
+                      <del *ngIf='product.promotion>0'>{{product.old_price | currency}}</del>
+
+                    </div>
+                    <div (click)="addToCart(product, $event)" *ngIf="product.stock" class="info-product-cart-mobile">
+
+                      <a class="link-product-add-cart-mobile">
+                        Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
+                      </a>
                     </div>
 
 
