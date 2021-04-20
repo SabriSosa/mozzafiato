@@ -1,18 +1,10 @@
 @use "assets/styles/color";
 
-@media (max-width: 1366px) {
-    .banner-info {
-        margin: 15em 0 0 3em;
-    }
-}
-
 .banner-info {
-    width: 50%;
-    margin: 5em 0 0 5em;
-    padding-bottom: 1em;
-    position: absolute;
+    width: 100%;
     z-index: 999999;
     animation-delay: 1s;
+    text-align: center;
 }
 .banner-info h2 {
     color: #fff;
@@ -30,7 +22,6 @@
 }
 
 .promotion-info {
-    max-width: 350px;
     font-family: "Playfair Display", serif;
     font-style: italic;
     font-size: 20px;
@@ -64,18 +55,46 @@
     display: inline-block;
 }
 
-@media (max-width: 1024px) {
-    .banner-info {
-        margin: 10em 0 0 4em;
+@media (max-width: 992px) {
+    img {
+        width: 65% !important;
     }
+    .promotion-name {
+        font-size: 40px;
+    }
+}
+.carousel-cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
     .banner-info h2 {
         font-size: 46px;
     }
+    .promotion-info {
+        max-width: 100%;
+    }
+
     .banner-info {
-        margin: 8em 0 0 5em;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .carousel-cell {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        img {
+            height: 50% !important;
+        }
     }
 }
 
@@ -83,14 +102,15 @@
     .banner-info h2 {
         font-size: 38px;
     }
-    .banner-info {
-        margin: 5em 0 0 4em;
-    }
 }
 
 @media (max-width: 480px) {
-    .banner-info {
-        width: 68%;
+    .promotion-name {
+        font-size: 40px;
+    }
+
+    .add-btn {
+        padding: 20px 30px;
     }
 }
 

@@ -14,6 +14,7 @@ export class BannerComponent implements OnInit {
 
   @Input() promotions: [];
   @Input() cellsToShow: number;
+  @Input() arrows: boolean;
   @Input() height: number;
   @Input() dots: boolean;
   @Input() arrowsOutside: boolean;

@@ -5,7 +5,8 @@
     <div class="wrap">
         <div id="content">
             <div class="content-top">
-                <app-banner [promotions]="promotions" [cellsToShow]=1 [height]=500 [dots]=true></app-banner>
+                <app-banner [promotions]="promotions" [cellsToShow]=1 [height]=500 [dots]=true [arrowsOutside]=true [arrows]="isDesktop">
+                </app-banner>
                 <app-products></app-products>
                 <app-contact></app-contact>
             </div>

@@ -1,6 +1,6 @@
 <div class="container banner">
-  <carousel [height]="height" [borderRadius]="10" [autoplay]="true" [dots]="dots" [loop]="true"
-    [arrowsOutside]="arrowsOutside" [cellsToShow]="cellsToShow">
+  <carousel [height]="height" [borderRadius]="10" [autoplay]="false" [dots]="dots" [loop]="true"
+    [arrowsOutside]="arrowsOutside" [cellsToShow]="cellsToShow" [arrows]="arrows">
 
     <div *ngFor="let promotion of promotions" class="carousel-cell">
       <div class="banner-info">
@@ -8,7 +8,8 @@
         <h1 class="promotion-name">{{promotion.name}}</h1>
         <p class="promotion-info">{{promotion.info}}
         </p>
-        <a class="add-btn" (click)="addProduct(promotion)">AÑADIR</a>
+        <a class="btn-web add-btn" (click)="addProduct(promotion)">AÑADIR</a>
+
       </div>
       <img class="promotion-image" src={{promotion.path}}>
     </div>
