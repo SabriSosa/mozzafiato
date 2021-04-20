@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
 
     closeResult = '';
 
-    public productsList: Product[] = products;
+    public productsList: Product[] = products.filter(p => !p.is_promotion);
 
     open(idProduct) {
         const modalRef = this.modalService.open(ProductDetailComponent);

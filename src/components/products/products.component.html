@@ -27,7 +27,7 @@
                     <span *ngIf=product.new class="status-product-new">Nuevo</span>
                     <span *ngIf=!product.stock class="status-product-soon">Sin stock</span>
                     <span *ngIf=product.soon class="status-product-new">Proximamente</span>
-                    <span *ngIf=product.promotion class="status-product-sale">{{product.promotion_discount}}</span>
+                    <span *ngIf='product.promotion>0' class="status-product-sale">{{product.promotion_discount}}</span>
                   </div>
 
                   <div class="item-info-product p-relative">
@@ -35,7 +35,7 @@
                     <h3><a (click)="open(product.id)">{{product.name}}</a></h3>
                     <div class="info-product-price">
                       <span>{{product.price | currency}}</span>
-                      <del *ngIf=product.promotion>{{product.old_price | currency}}</del>
+                      <del *ngIf='product.promotion>0'>{{product.old_price | currency}}</del>
 
                     </div>
                     <div class="product-rating-star">

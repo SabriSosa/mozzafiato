@@ -6,8 +6,8 @@ export class Product {
   price: number;
   old_price: number;
   new: boolean;
-  promotion: boolean;
-  promotion_discount: string;
+  is_promotion: boolean;
+  promotion_discount: Number;
   stock: boolean;
   soon: boolean;
 

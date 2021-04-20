@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChildren, Input } from '@angular/core';
 import { CarouselComponent } from 'angular-responsive-carousel';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-banner',
@@ -10,7 +12,7 @@ export class BannerComponent implements OnInit {
 
   myCarousel;
 
-  @Input() images: [];
+  @Input() promotions: [];
   @Input() cellsToShow: number;
   @Input() height: number;
   @Input() dots: boolean;
@@ -19,6 +21,8 @@ export class BannerComponent implements OnInit {
 
 
   @ViewChildren(CarouselComponent) carouselComponent;
+
+  constructor(private shoppingCartService: ShoppingCartService, private alertService: AlertService) { }
 
   ngOnInit() {
   }
@@ -38,6 +42,11 @@ export class BannerComponent implements OnInit {
   }
 
 
+  addProduct(promotion) {
+    event.stopPropagation();
+    this.shoppingCartService.addToCart(promotion);
+    this.alertService.success('Promocion agregada al carrito');
+  }
 
   next() {
     this.myCarousel.next();

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import products from 'products.json';
+import { Product } from '@models/product.interface';
 
 @Component({
   selector: 'app-home',
@@ -8,29 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  images = [
-    {
-      path: 'assets/images/promotions/promo_1.png',
-      title: 'Promo 5 + 1',
-      info: 'Con la compra de 5 prosecco te llevas 1 aceite de regalo',
-      link: '#'
-    },
-    {
-      path: 'assets/images/promotions/promo_2.png',
-      title: 'Promo 5 + 1',
-      info: 'Con la compra de 5 prosecco te llevas 1 aceite de regalo',
-      link: '#'
-    },
-    {
-      path: 'assets/images/promotions/promo_3.png',
-      title: 'Promo 5 + 1',
-      info: 'Con la compra de 5 prosecco te llevas 1 aceite de regalo',
-      link: '#'
-    },
+  public promotionList: Product[] = products;
 
+  promotions = this.promotionList.filter(p => p.is_promotion);
 
-  ];
   ngOnInit(): void {
+
   }
 
 }
