@@ -25,18 +25,25 @@
       <div class="description">
         <span>{{product.name}}</span>
       </div>
-      <div class="total-price">{{product.price| currency}}</div>
-      <div class="quantity">
-        <button (click)="removeQtyProduct(product)" class="minus-btn" type="button" name="button">
-          <img src="assets/images/minus.svg" alt="" />
-        </button>
-        <input type="text" name="name" value={{product.quantity}} (change)="addProductQuantity(product, $event)">
-        <button (click)="addProduct(product)" class="plus-btn" type="button" name="button">
-          <img src="assets/images/plus.svg" alt="" />
-        </button>
+      <div class="subTotal">
+        <div class="total-price">{{product.price| currency}}</div>
+        <div class="quantity">
+          <button (click)="removeQtyProduct(product)" class="minus-btn" type="button" name="button">
+            <img src="assets/images/minus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value={{product.quantity}} (change)="addProductQuantity(product, $event)">
+          <button (click)="addProduct(product)" class="plus-btn" type="button" name="button">
+            <img src="assets/images/plus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">{{product.price * product.quantity | currency}}</div>
       </div>
 
-      <div class="total-price">{{product.price * product.quantity | currency}}</div>
+      <div class="btn-mobile">
+        <a (click)="removeProduct(product)"> Eliminar
+        </a>
+      </div>
     </div>
     <div class="item total">
       <span class="total-text"> Total: </span>
