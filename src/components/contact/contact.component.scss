@@ -71,7 +71,9 @@
 .contact-info-left {
     padding: 20px;
     background: #e6eaec;
-    margin-top: 135px;
+    @media (max-width: 992px) {
+        margin-top: 20px;
+    }
 }
 .contact-info-left h2 {
     font-size: 22px;
@@ -126,3 +128,4 @@ ol {
 .form-control {
     background-color: #e6eaec;
 }
+
