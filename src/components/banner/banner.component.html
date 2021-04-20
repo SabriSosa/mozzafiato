@@ -4,12 +4,13 @@
 
     <div *ngFor="let promotion of promotions" class="carousel-cell">
       <div class="banner-info">
-        <h2>{{promotion.name}}</h2>
-        <p>{{promotion.info}}
+        <span class="promotion-price">{{promotion.price  | currency}}</span>
+        <h1 class="promotion-name">{{promotion.name}}</h1>
+        <p class="promotion-info">{{promotion.info}}
         </p>
-        <a (click)="addProduct(promotion)">AÑADIR</a>
+        <a class="add-btn" (click)="addProduct(promotion)">AÑADIR</a>
       </div>
-      <img src={{promotion.path}}>
+      <img class="promotion-image" src={{promotion.path}}>
     </div>
   </carousel>
 </div>

@@ -16,15 +16,6 @@
                   <div class="item-thumb-product" (click)="open(product.id)">
                     <img src={{product.path}} alt="" class="product-thumb-front" />
                     <img src={{product.path}} alt="" class="product-thumb-behind" />
-                    <div (click)="addToCart(product, $event)" *ngIf="product.stock" class="info-product-cart">
-                      <div class="inner-info-product-cart">
-                        <a class="link-product-add-cart">
-                          Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
-                        </a>
-                      </div>
-                    </div>
-
-
                     <span *ngIf=product.new class="status-product-new">Nuevo</span>
                     <span *ngIf=!product.stock class="status-product-soon">Sin stock</span>
                     <span *ngIf=product.soon class="status-product-new">Proximamente</span>
@@ -45,14 +36,11 @@
                       <del *ngIf='product.promotion>0'>{{product.old_price | currency}}</del>
 
                     </div>
-                    <div (click)="addToCart(product, $event)" *ngIf="product.stock" class="info-product-cart-mobile">
-
-                      <a class="link-product-add-cart-mobile">
-                        Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
-                      </a>
-                    </div>
-
-
+                  </div>
+                  <div class="add-button-container" (click)="addToCart(product, $event)" *ngIf="product.stock">
+                    <a class="add-btn">
+                      Añadir <a class="link-quick-view"><i class="fas fa-shopping-cart"></i></a>
+                    </a>
                   </div>
                 </div>
 

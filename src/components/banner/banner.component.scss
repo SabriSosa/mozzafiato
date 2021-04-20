@@ -1,3 +1,4 @@
+@use "assets/styles/color";
 
 @media (max-width: 1366px) {
     .banner-info {
@@ -7,10 +8,11 @@
 
 .banner-info {
     width: 50%;
-    margin: 10em 0 0 5em;
+    margin: 5em 0 0 5em;
     padding-bottom: 1em;
     position: absolute;
     z-index: 999999;
+    animation-delay: 1s;
 }
 .banner-info h2 {
     color: #fff;
@@ -26,20 +28,40 @@
     margin: 1em 0 2em;
     font-size: 16px;
 }
-.banner-info a {
-    color: #fff;
-    background: #f45a40;
-    padding: 0.7em 1.5em;
-    text-decoration: none;
+
+.promotion-info {
+    max-width: 350px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 39px;
+    color: #313639;
+    margin-bottom: 50px;
+    text-transform: capitalize;
 }
-.banner-info a:hover {
-    background: #fff;
-    color: #ff674f;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -ms-transition: 0.5s all;
+
+.promotion-name {
+    color: color.$white;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 13px;
+}
+
+.carousel-cell {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.promotion-price {
+    font-family: "Yellowtail", cursive;
+    color: color.$red-italy;
+    font-size: 40px;
+    display: inline-block;
 }
 
 @media (max-width: 1024px) {
