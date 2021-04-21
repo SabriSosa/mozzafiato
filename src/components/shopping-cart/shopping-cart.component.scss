@@ -163,9 +163,7 @@ input:focus {
 .btn-mobile {
     display: none;
 }
-.subTotal {
-    width: 100%;
-}
+
 @media (max-width: 800px) {
     .shopping-cart {
         width: 100%;
@@ -181,10 +179,11 @@ input:focus {
         display: none;
     }
     .btn-mobile {
-        display: inline;
+        display: block;
         width: 100%;
         text-align: center;
         color: color.$red-italy;
+        cursor: pointer;
     }
     .subTotal {
         align-items: center;
@@ -206,5 +205,23 @@ input:focus {
     font-weight: 300;
     margin-top: 8px;
     justify-content: space-around;
-    width: 40%;
+    width: 100%;
+    max-width: 300px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (max-width: 576px) {
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 800px) {
+        max-width: 250px;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+    }
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+    }
 }
