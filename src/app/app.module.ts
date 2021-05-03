@@ -16,6 +16,7 @@ import { FooterComponent } from '@components/footer/footer.component';
 import { ProductDetailComponent } from '@components/product-detail/product-detail.component';
 import { ShoppingCartComponent } from '@components/shopping-cart/shopping-cart.component';
 import { AlertComponent } from '@components/alert/alert.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AlertComponent } from '@components/alert/alert.component';
     AppRoutingModule,
     IvyCarouselModule,
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

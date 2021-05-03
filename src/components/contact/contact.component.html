@@ -16,33 +16,33 @@
               </div>
               <div class="col-lg-8 col-sm-12">
                 <div class="contact-form-right">
-                  <form id="contactForm">
+                  <form #myForm="ngForm" (ngSubmit)="sendEmail(myForm)" id="contactForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required
-                            data-error="Porfavor ingresa tu nombre">
+                          <input type="text" class="form-control" id="name" ngModel name="name" placeholder="Nombre"
+                            required data-error="Porfavor ingresa tu nombre">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" placeholder="Email" id="email" class="form-control" name="name" required
-                            data-error="Porfavor ingresa tu email">
+                          <input type="text" placeholder="Email" id="email" ngModel class="form-control" name="email"
+                            required data-error="Porfavor ingresa tu email">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" class="form-control" id="subject" name="name" placeholder="Motivo" required
-                            data-error="Porfavor ingresa el motivo">
+                          <input type="text" class="form-control" id="subject" ngModel name="subject"
+                            placeholder="Motivo" required data-error="Porfavor ingresa el motivo">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea class="form-control" id="message" placeholder="Mensaje" rows="4"
-                            data-error="Escribi el mensaje" required></textarea>
+                          <textarea class="form-control" id="message" name="message" ngModel placeholder="Mensaje"
+                            rows="4" data-error="Escribi el mensaje" required></textarea>
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="submit-button text-center">
